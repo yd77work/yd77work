@@ -40,6 +40,6 @@ node {
     }
     stage("stage03")
     {
-        archiveArtifacts artifacts: "https://github.com/yd77work/Ansible/tree/master/ansible/*.yml", fingerprint: true
+        archiveArtifacts artifacts: "**/Ansible/tree/master/ansible/*.yml", fingerprint: true
      }
 }
