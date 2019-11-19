@@ -26,7 +26,6 @@ node(){
         
 http://35.223.111.195/generic-webhook-trigger/invoke?token=71B6B68DFC8C34235B64    }
     
-}      
 input("Please approved deploy to.")
 node(){
     
