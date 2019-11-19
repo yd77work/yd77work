@@ -30,7 +30,7 @@ node {
     http://35.223.111.195/generic-webhook-trigger/invoke?token=4da494e53758b69e3eca3fa0dca6e189628c1f57 
     //withCredentials([usernamePassword(credentialsId: '9c3062a2-17a2-4617-a332-6cff68b12cea', passwordVariable: 'password', usernameVariable: 'username')]) 
     //{sh"git clone https://$username:$password@github.com/yd77work/Ansible"
-    {sh"git clone  -b master yd77work@github.com:/yd77work/yd77work.git"
+    {sh"git clone  -b master https://yd77work:4da494e53758b69e3eca3fa0dca6e189628c1f57@github.com/yd77work/Ansible"
     }
     }
     stage("stage02")
