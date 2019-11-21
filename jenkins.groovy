@@ -33,22 +33,29 @@ node {
     {sh"git clone  -b master https://yd77work:4da494e53758b69e3eca3fa0dca6e189628c1f57@github.com/yd77work/Ansible"
     }
     }
+    
     stage("stage02")
     {
         def workDir = sh(returnStdout: true, script: "pwd").trim()
         sh "cd $workDir && cd ./Ansible && ls -lh"
     }
+ 
     stage("stage03")
     {
         archiveArtifacts artifacts: "**/Ansible/ansible/*.yml", fingerprint: true
-     }
-    stage('colorfull') {
-        ansiColor('xterm') {
+    }
+    
+    stage('colorfull') 
+    {
+        ansiColor('xterm') 
+            {
             currentBuild.displayName = "#${BUILD_NUMBER} text1 ${params.BRANCH}"
             printlnGreen "ttexttt"
-        }
+            }
+    }
  }
 
-def printlnGreen(text) {
+def printlnGreen(text) 
+{
     println "\033[1;4;37;42m$text\033[0m"
 }
