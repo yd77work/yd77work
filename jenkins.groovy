@@ -50,7 +50,7 @@ node {
         ansiColor('xterm') 
             {
             currentBuild.displayName = "#${BUILD_NUMBER} text1 ${params.BRANCH}"
-            printlnGreen "ttexttt"
+            printlnGreen "Hi! I'm f#cking green!!!"
             }
     }
  }
