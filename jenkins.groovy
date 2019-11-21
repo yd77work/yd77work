@@ -42,4 +42,13 @@ node {
     {
         archiveArtifacts artifacts: "**/Ansible/ansible/*.yml", fingerprint: true
      }
+    stage('colorfull') {
+        ansiColor('xterm') {
+            currentBuild.displayName = "#${BUILD_NUMBER} text1 ${params.BRANCH}"
+            printlnGreen "ttexttt"
+        }
+ }
+
+def printlnGreen(text) {
+    println "\033[1;4;37;42m$text\033[0m"
 }
